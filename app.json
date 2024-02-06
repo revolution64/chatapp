@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "AI-Recipee-Suggester",
+    "slug": "AI-Recipee-Suggester",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "AI-Recipee-Suggester"
+}
