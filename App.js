@@ -1,12 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ChatInput from './components/ChatInput';
+import ChatBox from "./components/ChatBox";
 
 export default function App() {
+
+  const [messages, setMessages] = useState([`firstMessage`])
+
   return (
+
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <StatusBar/>
+      <ChatBox messages={messages}/>
+      <ChatInput messages={messages} setMessages={setMessages}/>
     </View>
   );
 }
@@ -16,6 +23,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 });
