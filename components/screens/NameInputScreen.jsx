@@ -1,8 +1,7 @@
 import {View} from "react-native";
 import React from "react";
-import TextInputWithButton from "./TextInputWithButton";
-import styles from './styles';
-
+import TextInputWithButton from "../partials/TextInputWithButton";
+import styles from '../styles';
 
 const NameInputScreen = ({navigation}) => {
 

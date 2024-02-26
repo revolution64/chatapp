@@ -1,5 +1,5 @@
 import {ScrollView, TextInput, Text, View, Button, Alert, TouchableOpacity} from 'react-native';
-import styles from './styles';
+import styles from '../styles';
 import {useState} from "react";
 
 const TextInputWithButton = ({onPress, buttonLabel = `Submit`}) => {

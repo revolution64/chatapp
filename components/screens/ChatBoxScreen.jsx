@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {StatusBar, StyleSheet, View} from "react-native";
-import ChatBox from "./ChatBox";
-import TextInputWithButton from "./TextInputWithButton";
-import styles from './styles';
+import ChatBox from "../chatbox/ChatBox";
+import TextInputWithButton from "../partials/TextInputWithButton";
+import styles from '../styles';
 
 const ChatBoxScreen = ({route}) => {
     const [messages, setMessages] = useState([`firstMessage`])
