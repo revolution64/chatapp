@@ -2,7 +2,7 @@ import {ScrollView, TextInput, Text, View, Button, Alert, TouchableOpacity} from
 import styles from './styles';
 import {useState} from "react";
 
-const ChatInput = ({messages, setMessages}) => {
+const TextInputWithButton = ({onPress, buttonLabel = `Submit`}) => {
 
     const [inputValue, setInputValue] = useState();
 
@@ -17,9 +17,9 @@ const ChatInput = ({messages, setMessages}) => {
                 }}/>
                 <TouchableOpacity style={styles.button} onPress={() => {
                     setInputValue("");
-                    setMessages([...messages, inputValue])
+                    onPress(inputValue);
                 }}>
-                    <Text style={styles.buttonText}>Press Me</Text>
+                    <Text style={styles.buttonText}>{buttonLabel}</Text>
                 </TouchableOpacity>
             </View>
 
@@ -27,4 +27,4 @@ const ChatInput = ({messages, setMessages}) => {
     )
 }
 
-export default ChatInput;
+export default TextInputWithButton;
