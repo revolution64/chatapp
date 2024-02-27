@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
   author: {
     color: 'blue',
   },
+  otherAuthor: {
+    color: '#FF5722',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',

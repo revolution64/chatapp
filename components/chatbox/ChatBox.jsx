@@ -2,12 +2,12 @@ import { ScrollView, Text, View } from 'react-native';
 import React from 'react';
 import styles from '../styles';
 
-function ChatBox({ messages, profileName = 'Seppe' }) {
+function ChatBox({ messages }) {
   const messageComponents = messages.map(
-    (message, index) => (
+    ({ username, message }, index) => (
       <View style={styles.chatMessage} key={index}>
-        <Text style={styles.author}>
-          {profileName}
+        <Text style={username === 'You' ? styles.author : styles.otherAuthor}>
+          {username}
           :
           {' '}
         </Text>
